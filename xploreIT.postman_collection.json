@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "ca3d2f4a-7de2-4c63-b91f-eaa0ab71c5f1",
+		"name": "xploreIT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28587572"
+	},
+	"item": [
+		{
+			"name": "userregister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Johnsony1\",\r\n  \"email\": \"john123@gmail.com\",\r\n  \"password\": \"123456\"\r\n\r\n \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminregister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Johnsony1\",\r\n  \"email\": \"john123@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"admin\"\r\n \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\": \"john12@gmail.com\",\r\n  \"password\": \"123456\"\r\n }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjcwNjYyZThlOGY2ODA5NjRhZDM2NyIsImlhdCI6MTc2NDE2NTIyOCwiZXhwIjoxNzY2NzU3MjI4fQ.pE2GGIrKVIgWmWAVvNwjT_Asiy-r9cm86GK_NvZ9Dss",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "joelrajsr",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "joelraj123@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "9896532747",
+							"type": "text"
+						},
+						{
+							"key": "designation",
+							"value": "developer",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "50000",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1f08c889-94d8-4280-98fc-c9bc329ae8e2"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get employee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjZmZjA2NzJjNjU0MzdhN2FhMmI0OCIsImlhdCI6MTc2NDE2MzMzNCwiZXhwIjoxNzY2NzU1MzM0fQ.r5_Nj4Dilm3BfKwXZwsH7gHLT0AvievsFWmjZYKjFks",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "johnson",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "john1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9566593695",
+							"type": "text"
+						},
+						{
+							"key": "designation",
+							"value": "developer",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "5000",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1f08c889-94d8-4280-98fc-c9bc329ae8e2"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateemployee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjdjY2Q4OTQ1OTYzOWQ4YmNlNjVkYiIsImlhdCI6MTc2NDIzMzI0MCwiZXhwIjoxNzY2ODI1MjQwfQ.vq-NV1CO6AYtOnZT9n65IIr_9SZjb-2D-K58ixLjGis",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "joelrajsr",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "joelraj124@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "9896562382",
+							"type": "text"
+						},
+						{
+							"key": "designation",
+							"value": "devlopper",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "52000",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1f08c87e-aa12-4bb0-aa0f-1ddbb395700c"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/employees/6927f1b0ba51c9c71e3ba834",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employees",
+						"6927f1b0ba51c9c71e3ba834"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete employee",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjcwNjYyZThlOGY2ODA5NjRhZDM2NyIsImlhdCI6MTc2NDE2NTIyOCwiZXhwIjoxNzY2NzU3MjI4fQ.pE2GGIrKVIgWmWAVvNwjT_Asiy-r9cm86GK_NvZ9Dss",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "joelrajsr",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "joelraj124@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "9896562382",
+							"type": "text"
+						},
+						{
+							"key": "designation",
+							"value": "devlopper",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "52000",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1f08c87e-aa12-4bb0-aa0f-1ddbb395700c"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/employees/69270693e8e8f680964ad36e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employees",
+						"69270693e8e8f680964ad36e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
